@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberdade Financeira com IA - E-book Exclusivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f0f0f 0%, #2d1b69 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #c026d3 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+            background: #1a1a1a;
+            border: 1px solid #2d2d2d;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #8b5cf6;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        .countdown {
+            background: linear-gradient(135deg, #8b5cf6 0%, #c026d3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        .kiwify-badge {
+            background: #8b5cf6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-robot text-2xl mr-2 text-purple-500"></i>
+                <span class="text-xl font-bold">Prompt Milionário</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#beneficios" class="hover:text-purple-400 transition">Benefícios</a></li>
+                    <li><a href="#conteudo" class="hover:text-purple-400 transition">Conteúdo</a></li>
+                    <li><a href="#depoimentos" class="hover:text-purple-400 transition">Depoimentos</a></li>
+                    <li><a href="#faq" class="hover:text-purple-400 transition">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <div class="kiwify-badge mb-4">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Pagamento Seguro via Kiwify</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Liberdade Financeira com IA</h1>
+                <p class="text-xl mb-6 text-gray-300">Descubra como usar Inteligência Artificial para gerar imagens e vídeos incríveis e construir uma fonte de renda sustentável.</p>
+                <div class="mb-6 p-4 bg-gray-900 rounded-lg border border-gray-800">
+                    <p class="text-lg font-semibold text-purple-400">Oferta por tempo limitado:</p>
+                    <p class="text-2xl font-bold">Apenas <span class="countdown">R$ 47,00</span></p>
+                    <p class="text-sm text-gray-400">Termina em: <span id="countdown" class="font-bold">23:59:59</span></p>
+                </div>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="btn-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg" onclick="scrollToPurchase()">
+                        Comprar com Kiwify
+                    </button>
+                </div>
+                <div class="mt-6 flex items-center">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente">
+                        <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                        <img class="w-10 h-10 rounded-full border-2 border-gray-800" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                    </div>
+                    <p class="ml-3 text-sm text-gray-400">+100 pessoas já adquiriram este e-book</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="bg-gray-900 rounded-2xl shadow-2xl p-6 w-80 floating border border-gray-800">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold">E-book: IA Financeira</h3>
+                            <i class="fas fa-book text-purple-500"></i>
+                        </div>
+                        <img src="img/capa.png" alt="Capa do E-book" class="rounded-lg mb-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-400 line-through">R$ 97,00</span>
+                            <span class="text-2xl font-bold text-purple-500">R$ 47,00</span>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-purple-600 text-white font-bold py-1 px-3 rounded-full shadow-lg">
+                        OFERTA ESPECIAL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="py-16 bg-gray-900 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Você Vai Aprender</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fundamentos da IA</h3>
+                    <p class="text-gray-400">Compreenda os conceitos básicos de Inteligência Artificial e como aplicá-los na criação de conteúdo visual.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-paint-brush text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Geração de Imagens</h3>
+                    <p class="text-gray-400">Aprenda a criar imagens impressionantes usando ferramentas de IA como Midjourney, DALL-E e Stable Diffusion.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Criação de Vídeos</h3>
+                    <p class="text-gray-400">Domine a produção de vídeos com IA, desde a geração de roteiros até a criação completa de videos curtos.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Monetização</h3>
+                    <p class="text-gray-400">Descubra estratégias comprovadas para monetizar suas habilidades com IA e alcançar a liberdade financeira.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ferramentas Essenciais</h3>
+                    <p class="text-gray-400">Conheça as melhores ferramentas de IA disponíveis no mercado e como utilizá-las de forma eficiente.</p>
+                </div>
+                <div class="feature-card p-6 rounded-xl">
+                    <div class="w-14 h-14 bg-purple-900 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-rocket text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Aceleração de Resultados</h3>
+                    <p class="text-gray-400">Aprenda atalhos e técnicas avançadas para acelerar seu aprendizado e obter resultados mais rapidamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Section -->
+    <section id="conteudo" class="py-16 bg-black border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Você Recebe</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-gray-900 rounded-2xl p-6 max-w-md mx-auto border border-gray-800">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>E-book completo com +10 páginas</span>
+                            </li>
+                              <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Prompts Otimizados para criação de Imagem e Video</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>PDF otimizado para leitura em qualquer dispositivo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Lista atualizada de ferramentas de IA</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Suporte por e-mail</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-900 rounded-2xl p-8 max-w-md mx-auto border border-gray-800">
+                        <h3 class="text-2xl font-bold text-center mb-6">Garanta Seu E-book Agora</h3>
+                        <div class="text-center mb-6">
+                            <span class="text-gray-500 line-through text-lg">R$ 97,90</span>
+                            <div class="text-4xl font-bold text-purple-500">R$ 47,90</div>
+                        </div>
+                        <div class="text-center mb-6">
+                            <div class="kiwify-badge inline-flex">
+                                <i class="fas fa-lock"></i>
+                                <span>Pagamento 100% seguro</span>
+                            </div>
+                        </div>
+                        <button onclick="redirectToKiwify()" class="w-full btn-primary text-white font-bold py-3 px-4 rounded-lg shadow-lg">
+                            Comprar Agora com Kiwify
+                        </button>
+                        <div class="mt-4 text-center text-sm text-gray-500">
+                            <i class="fas fa-shield-alt mr-1"></i> Garantia de 7 dias ou seu dinheiro de volta
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-16 bg-gray-900 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">O Que Nossos Alunos Dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="img/banco de imagem3.png" alt="Depoimento">
+                        <div>
+                            <h4 class="font-bold">Leo Komoto</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Em apenas 3 meses consegui criar uma renda extra significativa usando as técnicas deste e-book. Recomendo muito!</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="img/banco de imagem1.png" alt="Depoimento">
+                        <div>
+                            <h4 class="font-bold">Carla Mendes</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Nunca imaginei que IA pudesse ser tão acessível. O e-book explica tudo de forma clara e prática. Vale cada centavo!</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="img/banco de imagem2.png" alt="Depoimento">
+                        <div>
+                            <h4 class="font-bold">Ana Flavia</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Consegui triplicar minha produtividade na criação de conteúdo visual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-black border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gray-900 rounded-xl border border-gray-800 mb-4">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Preciso ter conhecimento prévio em IA?</span>
+                        <i class="fas fa-chevron-down text-purple-500"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-400">Não! O e-book foi desenvolvido para iniciantes e ensina tudo do zero, desde os conceitos básicos até as técnicas mais avançadas.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl border border-gray-800 mb-4">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Como recebo o e-book após a compra?</span>
+                        <i class="fas fa-chevron-down text-purple-500"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-400">Após a confirmação do pagamento pela Kiwify, você tera acesso imediato do e-book.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl border border-gray-800 mb-4">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Quanto tempo levo para ver resultados?</span>
+                        <i class="fas fa-chevron-down text-purple-500"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-400">Muitos alunos relatam resultados em poucas semanas, mas o tempo varia de acordo com sua dedicação. Com as técnicas certas, você pode começar a gerar renda em menos de 30 dias.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 rounded-xl border border-gray-800 mb-4">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-medium">Há garantia de satisfação?</span>
+                        <i class="fas fa-chevron-down text-purple-500"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-400">Oferecemos garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Não Perca Esta Oportunidade!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-300">Junte-se a milhares de pessoas que já estão transformando suas vidas financeiras com o poder da Inteligência Artificial.</p>
+            <button class="btn-primary text-white font-bold py-4 px-12 rounded-lg shadow-lg text-lg" onclick="redirectToKiwify()">
+                Comprar com Kiwify
+            </button>
+            <div class="mt-6 flex justify-center items-center text-gray-300">
+                <i class="fas fa-shield-alt mr-2"></i>
+                <span>Pagamento 100% seguro • Garantia de 7 dias</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-robot text-2xl mr-2 text-purple-500"></i>
+                        <span class="text-xl font-bold">Prompt Milionário</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Transformando vidas através da Inteligência Artificial</p>
+                </div>
+             
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 David Ribeiro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Contador de tempo para oferta
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+            target.setHours(23, 59, 59, 999); // Fim do dia
+            
+            const diff = target - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Função para redirecionar para a Kiwify (substitua pela URL real)
+        function redirectToKiwify() {
+            // Substitua pela URL real do seu produto na Kiwify
+            window.open('https://kiwify.com.br/seu-produto-aqui', '_blank');
+        }
+
+        // Função para rolar até a seção de compra
+        function scrollToPurchase() {
+            document.getElementById('conteudo').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
